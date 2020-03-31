@@ -16,17 +16,48 @@
   <link rel="stylesheet" href="css/fontawesome-all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
+  <script>
+    changeColor = (color) => {
+      document.getElementById("home").style.backgroundColor = color;
+    }
+    </script>
 </head>
 
 <body>
 
   <section class="content">
-    <div class="principal">a</div>
+    <div class="principal" id="home">
+      <button onClick="changeColor('tomato')" class="color1">
+
+      </button>
+      <button onClick="changeColor('teal')" class="color2">
+
+      </button>
+      <button onClick="changeColor('springgreen')" class="color3">
+
+      </button>
+    </div>
     <div class="projects">
-      <div class="project-card">b</div>
-      <div class="project-card">c</div>
-      <div class="project-card">d</div>
-      <div class="project-card">e</div>
+      <div class="project-card">
+        <div class="absolute">
+          <h1>Project 1</h1>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="absolute">
+          <h1>Project 2</h1>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="absolute">
+          <h1>Project 3</h1>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="absolute">
+          <h1>Project 4</h1>
+        </div>
+      </div>
     </div>
   </section>
 

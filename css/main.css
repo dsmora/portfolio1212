@@ -106,6 +106,7 @@ html {
 body {
     background-color: #f2f2f2;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 section.content {
@@ -115,10 +116,31 @@ section.content {
 }
 
 div.principal {
+    display: flex;
     min-width: 70%;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: yellow;
     color: blue;
+    justify-content: space-evenly;
+}
+
+
+button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.color1 {
+background-color: tomato;
+}
+
+.color2 {
+background-color: teal;
+}
+
+.color3 {
+background-color: springgreen;
 }
 
 div.projects {
@@ -133,16 +155,33 @@ div.projects div.project-card {
     height: calc(100% / 4);
 }
 
-div.projects div.project-card:hover {
-    -webkit-transform: scaleX(1.2);
-}
+.absolute{
+    background: rgba(255, 255, 255, 0.8);	
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: all ease-out 0.3s;
+        left: 100%;
+
+
+    }
+div.project-card:hover > .absolute {
+        left: 0;
+    }
 
 
 
 div.projects div.project-card {
+    display:flex;
+	position: relative;
     width: 100%;
     height: calc(100% / 4);
 }
+
+
 
 div.project-card:nth-child(2n){
     background-color: grey;
@@ -150,6 +189,7 @@ div.project-card:nth-child(2n){
 div.project-card:nth-child(2n-1){
     background-color: black;
 }
+
 
 
 
