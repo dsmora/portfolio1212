@@ -17,8 +17,16 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
   <script>
+    const views = ['home', "segundavista"];
     changeColor = (color) => {
       document.getElementById("home").style.backgroundColor = color;
+    }
+    changeView = (view) => {
+      const views = ['home', "segundavista"];
+      views.filter(item => item != view).map(item => {
+        document.getElementById(item).style.display = 'none';
+      })
+      document.getElementById(view).style.display = 'flex';
     }
     </script>
 </head>
@@ -27,33 +35,84 @@
 
   <section class="content">
     <div class="principal" id="home">
-      <button onClick="changeColor('tomato')" class="color1">
+      <!-- Botones para cambiar de vista -->
+      <!-- <div class="buttons-change">
+        <button onClick="changeView('home')" class="color1">
+        </button>
+        <button onClick="changeView('segundavista')" class="color2">
+        </button>
+      </div> -->
+      <!-- Nombre -->
+      <h1 class="name">
+        Verónica </br> Garcia
+      </h1>
+      <!-- botones redes sociales -->
+      <div class="socials">
+        <a href="#">
+          <img src="/assets/correo-electronico.svg" alt="email">
+        </a>
+        <a href="#">
+          <img src="/assets/linkedin.svg" alt="linkedin">
+        </a>
+        <a href="#">
+          <img src="/assets/medio.svg" alt="medium">
 
-      </button>
-      <button onClick="changeColor('teal')" class="color2">
+        </a>
+        <a href="#">
+          <img src="/assets/behance-network.svg" alt="behance">
+        </a>
 
-      </button>
-      <button onClick="changeColor('springgreen')" class="color3">
 
-      </button>
+      </div>
+    </div>
+    <div class="segunda-vista" id="segundavista">
+      <!-- Nombre -->
+      <div class="buttons-change">
+        <button onClick="changeView('home')" class="color1">
+        </button>
+        <button onClick="changeView('segundavista')" class="color2">
+        </button>
+      </div>
+      <h1 class="name">
+        Verónica </br> Garcia
+      </h1>
+      <!-- botones redes sociales -->
+      <div class="history">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed congue elementum lacus sed aliquam. Quisque venenatis,
+         arcu pretium lacinia varius, turpis elit auctor massa, ut 
+         luctus augue mi scelerisque risus. Curabitur ornare, enim 
+         id suscipit dapibus, odio mi tristique odio, quis vulputate 
+         sem arcu eu nulla. Nulla aliquet sodales diam at fermentum. 
+         Nunc ante ligula, pharetra in posuere at, cursus eu est. 
+         Suspendisse vel sapien a purus posuere fermentum in in diam. 
+         Nunc eget ultricies urna. Quisque enim leo, interdum quis 
+         venenatis ac, sagittis in orci. Nullam ac est sit amet tortor 
+         ullamcorper tempor vitae sed leo. Mauris neque lorem, semper 
+         vitae consequat at, commodo vel risus.
+      </div>
     </div>
     <div class="projects">
       <div class="project-card">
+        <img src="/assets/wechoose.png" alt="we-choose">
         <div class="absolute">
           <h1>Project 1</h1>
         </div>
       </div>
       <div class="project-card">
+        <img src="/assets/howmightwe.jpg" alt="how-might-we">
         <div class="absolute">
           <h1>Project 2</h1>
         </div>
       </div>
       <div class="project-card">
+        <img src="/assets/freshandlocal.png" alt="fresh-and-local">
         <div class="absolute">
           <h1>Project 3</h1>
         </div>
       </div>
       <div class="project-card">
+        <img src="/assets/whatsapp.png" alt="whatsapp">
         <div class="absolute">
           <h1>Project 4</h1>
         </div>
