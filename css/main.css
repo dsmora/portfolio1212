@@ -127,7 +127,7 @@ div.principal {
     min-width: 75%;
     min-height: 100vh;
     text-align: center;
-    background-image: url(/assets/fondoinicio.svg);
+    background-image: url(https://raw.githubusercontent.com/dsmora/portfolio1212/c49b7b40c4fb9a5ad2d561c22d0abca6e322e36c/assets/fondoinicio.svg);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
@@ -167,8 +167,6 @@ background-color: springgreen;
 div.projects {
     min-width: 30%;
     min-height: 100%;
-    background-color: green;
-    color: yellow;
 }
 
 .absolute {
